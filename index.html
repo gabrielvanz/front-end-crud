@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    
+    <meta name="description" content="CRUD de usuários">
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+
+</head>
+<body>
+    <h1 class="tituloPrincipal">CRUD<h1>
+
+    <br>
+
+    <div class="container-home ">
+        <h2 class="subTitulo">Selecione uma operação:</h2>
+        <br>
+        <ul class="button-list">
+            <li><button class="btnCreate">Create</button></li>
+            <li><button class="btnUpdate">Update</button></li>
+            <li><button class="btnDelete">Delete</button></li>
+            <li><button class="btnRead">Read</button></li>
+        </ul>
+    </div>
+
+    <!-- CREATE USER -->
+    <div class="container-create invisible">
+        <h2 class="subTitulo">Informe os dados:</h2>
+        <br>
+        <form id="create-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+    
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" name="idade" required><br>
+    
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required><br>
+    
+            <button class="submitCreate submitButton" type="button">Enviar</button>
+        </form>
+        <div class="msg-create-user-sucess" id="mensagemSucesso">Usuário criado com sucesso!</div>
+        <div class="msg-create-user-fail" id="mensagemErroCreate">Todos os campos devem ser preenchidos!</div>
+    </div>
+
+    <!-- UPDATE USER -->
+    <div class="container-update invisible">
+        <h2 class="subTitulo">Informe os dados para atualizar:</h2>
+        <br>
+        <form id="update-form">
+            <label for="nome">Id:</label>
+            <input type="text" id="idUpdate" name="id" required><br>
+    
+            <label for="idade">Idade:</label>
+            <input type="text" id="idadeUpdate" name="idade" required><br>
+    
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidadeUpdate" name="cidade" required><br>
+    
+            <button class="submitUpdate submitButton" type="button">Enviar</button>
+        </form>
+        <div class="msg-update-user-success" id="mensagemSucessoUpdate">Usuário atualizado com sucesso!</div>
+        <div class="msg-update-user-fail" id="mensagemErroUpdate">Todos os campos devem ser preenchidos!</div>
+    </div>
+
+    <!-- DELETE USER -->
+    <div class="container-delete invisible">
+        <h2 class="subTitulo">Informe o ID para deletar:</h2>
+        <br>
+        <form id="delete-form">
+            <label for="id">Id:</label>
+            <input type="text" id="deleteId" name="id" required><br>
+            <button class="submitDelete submitButton" type="button">Enviar</button>
+        </form>
+        <div class="msg-delete-user-success" id="mensagemSucessoDelete">Usuário deletado com sucesso!</div>
+    </div>
+
+    <!-- READ USER -->
+    <div class="container-read invisible">
+        <h2 class="subTitulo">Lista de usuários:</h2>
+        <br>
+        <table id="tabelaUsuarios">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+            <tbody id="listaUsuarios"></tbody>
+        </table>
+        <br>
+    </div>
+    
+    <a href="index.html" id="voltarHome" class="botao-flutuante invisible">
+        <img src="./images/back.png" alt="Home" width="30" height="30">
+    </a>
+
+    <div id="txtData" style="display: none;"></div>
+    <script type="module" src="crud.js"></script>
+    <script type="module" src="callFunctions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</body>
+</html>

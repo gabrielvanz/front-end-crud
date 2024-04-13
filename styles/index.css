@@ -1,0 +1,326 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    font-family: arial, helvetica, sans-serif;
+}
+
+.tituloPrincipal{
+    width: 100%;
+    font-size: 3vw;
+    padding-top: 10vh;
+    text-align: center;
+    
+}
+
+.container-home{
+    width: 65%;
+    margin: auto;
+    text-align: center;
+}
+
+.subTitulo{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.button-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.button-list li {
+    text-align: center;
+}
+
+.button-list button {
+    width: 100%;
+    padding: 32px;
+    font-size: 1.0vw;
+    background-color: gray;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button-list button:hover {
+    background-color: #282928;
+}
+
+/* Create User */
+
+.container-create form {
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.container-create label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.container-create input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 50px;
+    font-size: 0.9vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container-create button[type="submit"] { 
+    width: 10%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-create button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#create-form {
+    font-size: 1.25vw;
+}
+
+.submitButton {
+    width: 20%;
+    padding: 15px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 0.9vw;
+}
+
+.msg-create-user-sucess {
+    font-size: 40%;
+    width: 250px;
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% - 125px); 
+    border-radius: 5px;
+    display: none; 
+}
+
+.msg-create-user-fail {
+    font-size: 40%;
+    width: 300px;
+    height: 50px;
+    background-color: #b92424;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% - 150px); 
+    border-radius: 5px;
+    display: none; 
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Update user */
+.container-update form {
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.container-update label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.container-update input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 50px;
+    font-size: 0.9vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container-update button[type="submit"] { 
+    width: 10%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-update button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#update-form {
+    font-size: 1.25vw;
+}
+
+.msg-update-user-success {
+    font-size: 40%;
+    width: 250px;
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% - 125px); 
+    border-radius: 5px;
+    display: none; 
+}
+
+.msg-update-user-fail {
+    font-size: 40%;
+    width: 300px;
+    height: 50px;
+    background-color: #b92424;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% - 150px); 
+    border-radius: 5px;
+    display: none; 
+}
+
+/* Delete user */
+.container-delete form {
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.container-delete label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.container-delete input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 50px;
+    font-size: 0.9vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container-delete button[type="submit"] { 
+    width: 10%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-delete button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#delete-form {
+    font-size: 1.25vw;
+}
+
+.msg-delete-user-success {
+    font-size: 40%;
+    width: 250px;
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% - 125px); 
+    border-radius: 5px;
+    display: none; 
+}
+
+/* READ USER */
+#listaUsuarios li {
+    margin: auto;
+    text-decoration: none;
+    width: 50%;
+    border: 1px solid #ccc; /* Adicione uma borda */
+    padding: 2%; /* Adicione espaçamento interno */
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.2vw;
+
+}
+
+#tabelaUsuarios {
+    width: 75%;
+    margin: auto;
+    font-size: 1vw;
+    border-collapse: collapse;
+}
+
+#tabelaUsuarios th,
+#tabelaUsuarios td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #dddddd;
+}
+
+#tabelaUsuarios th {
+    background-color: #f2f2f2;
+}
+
+#tabelaUsuarios tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.botao-flutuante {
+    position: fixed;
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    z-index: 9999; /* Garante que o botão esteja acima de outros elementos */
+}
+
+.botao-flutuante img {
+    border-radius: 50%; /* Deixa a imagem redonda */
+    border: 1px solid #ccc; /* Adiciona uma borda à imagem */
+    background-color: #fff; /* Cor de fundo da imagem */
+    padding: 5px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+
+.invisible {
+    display: none;
+}
